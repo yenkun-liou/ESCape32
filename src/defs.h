@@ -124,7 +124,6 @@
 #define SINE_POWER 8
 #endif
 #ifndef FREQ_MIN
-//#define FREQ_MIN 24
 #define FREQ_MIN 16
 #endif
 #ifndef FREQ_MAX
