@@ -124,10 +124,12 @@
 #define SINE_POWER 8
 #endif
 #ifndef FREQ_MIN
-#define FREQ_MIN 24
+#define FREQ_MIN 16
+//#define FREQ_MIN 24
 #endif
 #ifndef FREQ_MAX
-#define FREQ_MAX 48
+#define FREQ_MAX 24
+//#define FREQ_MAX 48
 #endif
 #ifndef DUTY_MIN
 #define DUTY_MIN 1
@@ -142,7 +144,8 @@
 #define DUTY_RAMP 0
 #endif
 #ifndef DUTY_RATE
-#define DUTY_RATE 30
+#define DUTY_RATE 10
+//#define DUTY_RATE 30
 #endif
 #ifndef DUTY_DRAG
 #define DUTY_DRAG 0
