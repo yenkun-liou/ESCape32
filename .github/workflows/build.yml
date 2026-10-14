@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: carlosperate/arm-none-eabi-gcc-action@v1
+      with:
+      release: '15.3.Rel1'
     - uses: actions/checkout@v4
     - run: |
         git clone https://github.com/libopencm3/libopencm3.git
