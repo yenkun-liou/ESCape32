@@ -4,18 +4,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: carlosperate/arm-none-eabi-gcc-action@v1
-      with:
-      release: '15.3.Rel1'
-    - uses: actions/checkout@v4
-    - run: |
-        git clone https://github.com/libopencm3/libopencm3.git
-        make -C libopencm3 TARGETS='stm32/f0 stm32/g0 stm32/g4 stm32/l4'
-        cmake -B build -D LIBOPENCM3_DIR=libopencm3
-        cd build
-        make
-    - uses: actions/upload-artifact@v4
-      with:
-        name: escape32-build
-        path: build/**/*.bin
-        retention-days: 7
+      - uses: carlosperate/arm-none-eabi-gcc-action@v1
+        with:
+          release: '15.3.Rel1'
+      - uses: actions/checkout@v4
+      - run: |
+          git clone https://github.com/libopencm3/libopencm3.git
+          make -C libopencm3 TARGETS='stm32/f0 stm32/g0 stm32/g4 stm32/l4'
+          cmake -B build -D LIBOPENCM3_DIR=libopencm3
+          cd build
+          make
+      - uses: actions/upload-artifact@v4
+        with:
+          name: escape32-build
+          path: build/**/*.bin
+          retention-days: 7
